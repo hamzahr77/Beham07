@@ -1,0 +1,19 @@
+{% load static %}
+<section id="header">
+    <a href="index.html"><img src="{%static 'img/logo.png'%}" class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'shop' %}">Shop</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'about us' %}">About Us</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li id="bag-og"><a href="cart.html"><img class="bag-icon" src="{%static 'img/icons/shopping-bag.png'%}"></a></li>
+            <img id="close" class="close-icon" src="{%static 'img/icons/x.png'%}">
+        </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><img class="bag-icon" src="{% static "img/icons/shopping-bag.png" %}"></a>
+        <img id="bar" class="menu-icon" src="{%static 'img/icons/bars.png'%}">
+    </div>
+</section>
