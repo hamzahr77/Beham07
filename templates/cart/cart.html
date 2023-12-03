@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section id="cart" class="section-p1">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="{%static 'img/icons/x.png'%}"></a></td>
+                <td><img src="{%static 'img/products/f1.jpg'%}"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="{%static 'img/icons/x.png'%}"></a></td>
+                <td><img src="{%static 'img/products/f2.jpg'%}"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img id="close" class="close-icon-cart" src="{%static 'img/icons/x.png'%}"></a></td>
+                <td><img src="{%static 'img/products/f3.jpg'%}"></td>
+                <td>Cartoon Astronaut T-Shirts</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1"></td>
+                <td>$118.19</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section id="cart-add" class="section-p1">
+    <div id="coupon">
+        <h3>Apply Coupon</h3>
+        <div>
+            <input type="text" placeholder="Enter Your Coupon">
+            <button class="normal">Apply</button>
+        </div>
+    </div>
+    <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>$ 335</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$ 335</td>
+            </tr>
+        </table>
+        <button class="normal">Proceed to checkout</button>
+    </div>
+</section>
+<section id="newsletter" class="section-p1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletter</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+{% endblock %}

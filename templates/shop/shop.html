@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+</section>
+<div id="mobile">
+    <a href="cart.html"><img class="bag-icon" src="{%static 'img/icons/shopping-bag.png'%}"></a>
+    <img id="bar" class="menu-icon" src="{%static 'img/icons/bars.png'%}">
+</div>
+</section>
+<section id="page-header">
+    <h2>#stayhome</h2>
+    <p>Save more with coupons & up to 70% off!</p>
+</section>
+<section id="product1" class="section-p1">
+    <div class="pro-container">
+{% for prod in shop %}
+<div class="pro" onclick="window.location.href='{% url 'products'%}';">
+    <img class="producto" src="{{ prod.photo.url}}">
+    <div class="des">
+        <span>{{prod.model_type}}</span>
+        <h5>{{prod.name}}</h5>
+        <div class="star">
+    {% for _ in "x"|ljust:prod.stars %}
+        <img class="star-icon" src="{% static 'img/icons/star.png' %}">
+    {% endfor %}
+</div>
+        <h4>{{prod.price}}</h4>
+    </div>
+    <div class="cart-icon-container"><a href="#"><img class="cart-icon" src="{%static 'img/icons/cart.png'%}"></a></div>
+</div>
+
+{% endfor %}
+<section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <img src="{%static 'img/icons/right-arrow.png'%}" class="arrow-icon">
+</section>
+<section id="newsletter" class="section-p1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletter</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+{% endblock %}
